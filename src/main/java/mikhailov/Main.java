@@ -5,6 +5,8 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+
+
         // Базовые типы и операции с ними
         byte a = 127;
         short b = 2;
@@ -80,6 +82,32 @@ public class Main {
         boolean randIsBig;
         boolean b1 = rand > 3 ? (randIsBig = true) : (randIsBig = false);
         System.out.println(randIsBig);
+
+        System.out.println(factorial(12));
+        System.out.println(fibonachi(10));
+
+
     }
 
+    //Рекурсия
+    static int factorial (int num){
+        if (num == 1){
+            return 1;
+        }
+        else{
+            return num * factorial(num - 1);
+        }
+    }
+
+    static int fibonachi(int num){
+        if (num == 1){
+            return 0;
+        }
+        else if(num == 2){
+                return 1;
+            }
+        else{
+            return fibonachi(num - 1) + fibonachi( num - 2);
+        }
+    }
 }
